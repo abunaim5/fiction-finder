@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
 
     const links = <>
-        <NavLink><li><a>Home</a></li></NavLink>
-        <NavLink><li><a>Listed Books</a></li></NavLink>
-        <NavLink><li><a>Pages to Read</a></li></NavLink>
-        <NavLink><li><a>Premium</a></li></NavLink>
-        <NavLink><li><a>Cart</a></li></NavLink>
+        <NavLink to='/' className='btn btn-ghost'><li>Home</li></NavLink>
+        <NavLink to='/category' className='btn btn-ghost'><li>Listed Books</li></NavLink>
+        <NavLink className='btn btn-ghost'><li>Pages to Read</li></NavLink>
+        <NavLink className='btn btn-ghost'><li>Premium</li></NavLink>
+        <NavLink className='btn btn-ghost'><li>Cart</li></NavLink>
     </>
 
     return (

@@ -8,6 +8,7 @@ import './index.css'
 import Root from './Layout/Root.jsx';
 import Home from './pages/Home/Home.jsx';
 import BookDetails from './pages/BookDetails/BookDetails.jsx';
+import BooksCategory from './pages/BooksCategory/BooksCategory.jsx';
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/details',
         element: <BookDetails></BookDetails>
+      },
+      {
+        path: '/category',
+        element: <BooksCategory></BooksCategory>
       }
     ]
   }
