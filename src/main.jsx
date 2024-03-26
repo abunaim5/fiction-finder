@@ -10,12 +10,14 @@ import Home from './pages/Home/Home.jsx';
 import BookDetails from './pages/BookDetails/BookDetails.jsx';
 import BooksCategory from './pages/BooksCategory/BooksCategory.jsx';
 import PageToRead from './pages/PageToRead/PageToRead.jsx';
+import Error from './components/Error/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root/>,
+    errorElement: <Error></Error>,
     children: [
       {
         index: true,

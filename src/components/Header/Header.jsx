@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
 
     const links = <>
-        <NavLink to='/' className='btn btn-ghost'><li>Home</li></NavLink>
-        <NavLink to='/category' className='btn btn-ghost'><li>Listed Books</li></NavLink>
-        <NavLink to='/page-read' className='btn btn-ghost'><li>Pages to Read</li></NavLink>
-        <NavLink className='btn btn-ghost'><li>Premium</li></NavLink>
-        <NavLink className='btn btn-ghost'><li>Cart</li></NavLink>
+        <NavLink to='/' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Home</li></NavLink>
+        <NavLink to='/category' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Listed Books</li></NavLink>
+        <NavLink to='/page-read' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Pages to Read</li></NavLink>
+        <NavLink to='premium' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Premium</li></NavLink>
+        <NavLink to='/cart' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Cart</li></NavLink>
     </>
 
     return (

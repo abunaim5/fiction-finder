@@ -1,6 +1,7 @@
 import image from '/images/bannerImg.png'
 import { HiOutlineUsers } from "react-icons/hi2";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
+import { Link } from 'react-router-dom';
 
 const CategoryListCard = () => {
     return (
@@ -30,7 +31,7 @@ const CategoryListCard = () => {
                     <div className='flex gap-3 items-center mt-4'>
                         <button className='px-5 py-2 rounded-full border-0 text-base bg-[#328EFF26] font-work font-normal text-[#328EFF]'>Category: Classic</button>
                         <button className='px-5 py-2 rounded-full border-0 text-base bg-[#FFAC3326] font-work font-normal text-[#FFAC33]'>Rating: 4.5</button>
-                        <button className='btn w-auto h-auto min-h-max px-5 py-2 rounded-full border-0 text-base bg-[#23BE0A] hover:bg-[#23BE0A] font-work font-medium text-white'>View Details</button>
+                        <Link to='/details'><button className='btn w-auto h-auto min-h-max px-5 py-2 rounded-full border-0 text-base bg-[#23BE0A] hover:bg-[#23BE0A] font-work font-medium text-white'>View Details</button></Link>
                     </div>
                 </div>
             </div>
