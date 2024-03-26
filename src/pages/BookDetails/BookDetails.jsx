@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { handleSetBooksIdInLocal } from '../../utils/localBooks/localBooks';
 // import image from '/images/bannerImg.png'
 
 const BookDetails = () => {
@@ -6,7 +7,7 @@ const BookDetails = () => {
     const { id } = useParams();
     const intId = parseInt(id);
     const book = books.find(book => book.bookId === intId);
-    const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+    const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
     return (
         <div className='grid grid-cols-6 gap-12 mt-12 mb-40'>
@@ -42,8 +43,8 @@ const BookDetails = () => {
                     <h4 className='flex gap-16 font-work text-[#131313B3]'><span>Rating:</span><span className='font-semibold text-[#131313]'>{rating}</span></h4>
                 </div>
                 <div className='mt-8 space-x-4'>
-                    <Link><button className="btn text-[#131313] bg-transparent border-2 border-[#50B1C9] hover:bg-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Read</button></Link>
-                    <Link><button className="btn text-white hover:text-[#131313] bg-[#50B1C9] hover:bg-transparent border-2 border-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Wishlist</button></Link>
+                    <Link onClick={()=>handleSetBooksIdInLocal('read',bookId)}><button className="btn text-[#131313] bg-transparent border-2 border-[#50B1C9] hover:bg-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Read</button></Link>
+                    <Link onClick={()=>handleSetBooksIdInLocal('wishlist',bookId)}><button className="btn text-white hover:text-[#131313] bg-[#50B1C9] hover:bg-transparent border-2 border-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Wishlist</button></Link>
                 </div>
             </div>
         </div>
