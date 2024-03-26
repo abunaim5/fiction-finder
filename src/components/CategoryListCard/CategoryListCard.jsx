@@ -1,4 +1,6 @@
 import image from '/images/bannerImg.png'
+import { HiOutlineUsers } from "react-icons/hi2";
+import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 
 const CategoryListCard = () => {
     return (
@@ -20,8 +22,8 @@ const CategoryListCard = () => {
                     </div>
                     <div className='font-work text-xl divide-y-[1px] font-medium text-[#131313CC]'>
                         <div className='mb-4 flex items-center gap-4'>
-                            <h4 className='text-[#13131399]'><span>icon</span> <span>Publisher: Scribner</span></h4>
-                            <h4 className='text-[#13131399]'><span>icon</span> <span>Page 192</span></h4>
+                            <h4 className='text-[#13131399] flex items-center gap-2'><span className='text-2xl'><HiOutlineUsers /></span> <span>Publisher: Scribner</span></h4>
+                            <h4 className='text-[#13131399] flex items-center gap-2'><span className='text-2xl'><HiOutlineDocumentChartBar /></span> <span>Page 192</span></h4>
                         </div>
                         <div></div>
                     </div>

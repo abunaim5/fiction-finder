@@ -1,4 +1,5 @@
 import CategoryListCard from "../../components/CategoryListCard/CategoryListCard";
+import { SlArrowDown } from "react-icons/sl";
 
 const BooksCategory = () => {
 
@@ -9,7 +10,7 @@ const BooksCategory = () => {
             </div>
             <div className="text-center mt-8">
                 <details className="dropdown">
-                    <summary className="m-1 btn text-white bg-[#23BE0A] hover:bg-[#23BE0A] border-transparent rounded-lg text-lg font-work font-semibold w-auto h-auto px-5 py-[14px]">Sort By</summary>
+                    <summary className="m-1 btn text-white bg-[#23BE0A] hover:bg-[#23BE0A] border-transparent rounded-lg text-lg font-work font-semibold w-auto h-auto px-5 py-[14px]">Sort By <span className="text-xl"><SlArrowDown /></span></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 font-work">
                         <li><a>Rating</a></li>
                         <li><a>Number of pages</a></li>

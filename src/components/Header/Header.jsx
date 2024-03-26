@@ -29,8 +29,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end text-lg font-work font-semibold space-x-4">
-                <button className="btn text-white hover:text-[#131313] bg-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-[#23BE0A] rounded-lg w-auto h-auto px-7 py-[18px]">Sign In</button>
-                <button className="btn text-white hover:text-[#131313] bg-[#59C6D2] hover:bg-transparent border-2 border-transparent hover:border-[#59C6D2] rounded-lg w-auto h-auto px-7 py-[18px]">Sign Up</button>
+                <button className="btn text-white hover:text-[#131313] bg-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-[#23BE0A] rounded-lg w-auto h-auto min-h-max px-7 py-[18px]">Sign In</button>
+                <button className="btn text-white hover:text-[#131313] bg-[#59C6D2] hover:bg-transparent border-2 border-transparent hover:border-[#59C6D2] rounded-lg w-auto h-auto min-h-max px-7 py-[18px]">Sign Up</button>
             </div>
         </div>
     );

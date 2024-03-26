@@ -1,0 +1,80 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.postimg.cc/pyNTcBrb/mocking-Bird-removebg-preview.png",
+      "review": "A profound novel that explores the themes of racial injustice, moral growth, and compassion through the eyes of a young girl in the Deep South.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Classic Fiction",
+      "tags": ["Coming-of-Age", "Legal Drama"],
+      "publisher": "J.B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 2,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.postimg.cc/htsmvHhX/1984-removebg-preview.png",
+      "review": "Orwell's dystopian masterpiece offers a haunting exploration of totalitarianism, surveillance, and individuality, as relevant today as ever.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Dystopian Fiction",
+      "tags": ["Political", "Science Fiction"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.postimg.cc/g233j2nY/gatsby.webp",
+      "review": "A luminous and critical portrayal of the American Dream, exploring themes of wealth, class, and longing in the Jazz Age.",
+      "totalPages": 218,
+      "rating": 4.4,
+      "category": "Classic Fiction",
+      "tags": ["American Dream", "Tragedy"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.postimg.cc/YS3gND6Z/ray.webp",
+      "review": "A timeless novel that captures the adolescent angst and alienation of teenage protagonist Holden Caulfield with depth and sensitivity.",
+      "totalPages": 234,
+      "rating": 4.2,
+      "category": "Literary Fiction",
+      "tags": ["Coming-of-Age", "Realism"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.postimg.cc/Vk89dqRV/pride-removebg-preview.png",
+      "review": "Austen's witty exploration of manners, marriage, and morality in the British gentry of the early 19th century, centered on the intelligent Elizabeth Bennet and her tumultuous relationship with Mr. Darcy.",
+      "totalPages": 432,
+      "rating": 4.6,
+      "category": "Classic Romance",
+      "tags": ["Romance", "Social Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "image": "https://i.postimg.cc/ryY0BS3r/harrey.webp",
+      "review": "The book that started the global phenomenon introduces Harry Potter, a young wizard, and his adventures in Hogwarts. A mix of magic, friendship, and courage.",
+      "totalPages": 309,
+      "rating": 4.9,
+      "category": "Fantasy Fiction",
+      "tags": ["Magic", "Adventure", "Coming-of-Age"],
+      "publisher": "Bloomsbury",
+      "yearOfPublishing": 1997
+    }
+  ]

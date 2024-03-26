@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import image from '/images/bannerImg.png'
+import { FaRegStar } from "react-icons/fa";
+// import image from '/images/bannerImg.png'
 
-const BookCard = () => {
+const BookCard = ({book}) => {
+
+    const {bookId, image, bookName, author, tags, rating, category} = book;
+
     return (
-        <Link>
+        <Link to={`/details/${bookId}`}>
             <div className='mt-9 p-6 rounded-2xl border border-[#13131326]'>
                 <div className='flex items-center justify-center px-24 py-8 bg-[#F3F3F3] rounded-2xl'>
                     <img src={image} alt="" />
@@ -14,14 +18,14 @@ const BookCard = () => {
                 </div>
                 <div className='mt-4 divide-y-[1px] divide-dashed space-y-5'>
                     <div>
-                        <h2 className='text-2xl font-bold text-[#131313] mb-4'>The Catcher in the Rye</h2>
-                        <h4 className='font-work font-medium text-[#131313CC]'>By : Awlad Hossain</h4>
+                        <h2 className='text-2xl font-bold text-[#131313] mb-4'>{bookName}</h2>
+                        <h4 className='font-work font-medium text-[#131313CC]'>By : <span>{author}</span></h4>
                     </div>
                     <div></div>
                 </div>
                 <div className='flex items-center justify-between font-work font-medium text-[#131313CC] mt-5'>
-                    <h4 className=''>Fiction</h4>
-                    <h4><span>5.0</span> <span>icon</span></h4>
+                    <h4 className=''>{category}</h4>
+                    <h4 className='flex items-center gap-2'><span>{rating}</span><span className='text-2xl'><FaRegStar /></span></h4>
                 </div>
             </div>
         </Link>
