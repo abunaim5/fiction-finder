@@ -9,10 +9,10 @@ const BookCard = () => {
                     <img src={image} alt="" />
                 </div>
                 <div className='flex gap-3 mt-6'>
-                    <button className='btn w-auto h-auto px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Young Adult</button>
-                    <button className='btn w-auto h-auto px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Identity</button>
+                    <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Young Adult</button>
+                    <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Identity</button>
                 </div>
-                <div className='mt-4 divide-y-2 divide-dashed space-y-5'>
+                <div className='mt-4 divide-y-[1px] divide-dashed space-y-5'>
                     <div>
                         <h2 className='text-2xl font-bold text-[#131313] mb-4'>The Catcher in the Rye</h2>
                         <h4 className='font-work font-medium text-[#131313CC]'>By : Awlad Hossain</h4>

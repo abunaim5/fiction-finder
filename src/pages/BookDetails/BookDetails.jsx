@@ -8,20 +8,20 @@ const BookDetails = () => {
                 <img className='' src={image} alt="" />
             </div>
             <div className='col-span-3'>
-                <div className='divide-y-2 space-y-6'>
+                <div className='divide-y-[1px] space-y-6'>
                     <div>
                         <h2 className='text-[40px] font-bold text-[#131313] mb-4'>The Catcher in the Rye</h2>
                         <h4 className='font-work text-xl font-medium text-[#131313CC]'>By : Awlad Hossain</h4>
                     </div>
                     <div></div>
                 </div>
-                <div className='font-work text-xl divide-y-2 font-medium text-[#131313CC] mt-4'>
+                <div className='font-work text-xl divide-y-[1px] font-medium text-[#131313CC] mt-4'>
                     <h4 className='mb-4'>Fiction</h4>
                     <div></div>
                 </div>
                 <p className='mt-6 font-work text-[#131313B3]'><span className='font-bold text-[#131313]'>Review: </span>Sit amet consectetur. Interdum porta pulvinar non sit aliquam. Aenean pulvinar blandit vel non enim elementum penatibus pellentesque ac. Nec accumsan euismod nulla adipiscing lectus. Morbi elementum a auctor erat diam tellus. Fermentum faucibus nulla enim ornare.
                     Id neque neque pretium enim platea urna non dictum. Faucibus dignissim ridiculus nibh tristique massa non.</p>
-                <div className='my-6 divide-y-2 space-y-6'>
+                <div className='my-6 divide-y-[1px] space-y-6'>
                     <div className='flex gap-3 items-center'>
                         <h4 className='font-work font-bold text-[#131313] mr-1'>Tag</h4>
                         <button className='btn w-auto h-auto px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>#Young Adult</button>
