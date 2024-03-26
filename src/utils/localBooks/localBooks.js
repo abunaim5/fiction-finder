@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const handleGetBooksIdInLocal = (listName) => {
     const bookIdListStr = localStorage.getItem(listName);
     if (bookIdListStr) {
@@ -14,6 +16,12 @@ const handleSetBooksIdInLocal = (listName, id) => {
         const newBookIdList = [...bookIdList, id];
         const newBookListStr = JSON.stringify(newBookIdList);
         localStorage.setItem(listName, newBookListStr);
+        if(listName === 'read'){
+            toast.success('Book added to read');
+        }
+        else if(listName === 'wishlist'){
+            toast.success('Book added to wishlist');
+        }
     }
     return;
 }
