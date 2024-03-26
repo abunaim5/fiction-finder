@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import { FaRegStar } from "react-icons/fa";
 // import image from '/images/bannerImg.png'
 
-const BookCard = ({book}) => {
-
-    const {bookId, image, bookName, author, tags, rating, category} = book;
+const BookCard = ({ book }) => {
+    const { bookId, image, bookName, author, tags, rating, category } = book;
 
     return (
         <Link to={`/details/${bookId}`}>
@@ -13,8 +12,13 @@ const BookCard = ({book}) => {
                     <img src={image} alt="" />
                 </div>
                 <div className='flex gap-3 mt-6'>
-                    <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Young Adult</button>
-                    <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Identity</button>
+
+                    {
+                        tags.map((tag, inx) => <button key={inx} className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>{tag}</button>)
+                    }
+
+                    {/* <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Young Adult</button>
+                    <button className='btn w-auto h-auto min-h-max px-4 py-2 rounded-full border-0 text-base bg-[#23BE0A0D] font-work font-medium text-[#23BE0A]'>Identity</button> */}
                 </div>
                 <div className='mt-4 divide-y-[1px] divide-dashed space-y-5'>
                     <div>

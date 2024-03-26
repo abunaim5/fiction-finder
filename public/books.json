@@ -8,7 +8,7 @@
       "totalPages": 281,
       "rating": 4.8,
       "category": "Classic Fiction",
-      "tags": ["Coming-of-Age", "Legal Drama"],
+      "tags": ["Coming_of_Age", "Legal Drama"],
       "publisher": "J.B. Lippincott & Co.",
       "yearOfPublishing": 1960
     },
@@ -47,7 +47,7 @@
       "totalPages": 234,
       "rating": 4.2,
       "category": "Literary Fiction",
-      "tags": ["Coming-of-Age", "Realism"],
+      "tags": ["Coming_of_Age", "Realism"],
       "publisher": "Little, Brown and Company",
       "yearOfPublishing": 1951
     },
@@ -73,7 +73,7 @@
       "totalPages": 309,
       "rating": 4.9,
       "category": "Fantasy Fiction",
-      "tags": ["Magic", "Adventure", "Coming-of-Age"],
+      "tags": ["Magic", "Adventure", "Coming_of_Age"],
       "publisher": "Bloomsbury",
       "yearOfPublishing": 1997
     }

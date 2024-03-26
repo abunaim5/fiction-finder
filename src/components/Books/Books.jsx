@@ -3,7 +3,6 @@ import BookCard from "../BookCard/BookCard";
 
 const Books = () => {
     const books = useLoaderData();
-    console.log(books);
 
     return (
         <div className="my-24">
