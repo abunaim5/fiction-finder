@@ -1,7 +1,10 @@
+import { useState } from "react";
 import CategoryListCard from "../../components/CategoryListCard/CategoryListCard";
 import { SlArrowDown } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const BooksCategory = () => {
+    const [active, setActive] = useState(0);
 
     return (
         <div className="mt-8">
@@ -19,8 +22,8 @@ const BooksCategory = () => {
                 </details>
             </div>
             <div role="tablist" className="tabs tabs-lifted tabs-lg mt-14 text-lg font-work text-[#131313CC]">
-                <button role="tab" className="tab tab-active">Read Books</button>
-                <button role="tab" className="tab">Wishlist Books</button>
+                <Link to='read'><button role="tab" onClick={() => setActive(0)} className={`tab ${active === 0 ? 'tab-active' : ''}`}>Read Books</button></Link>
+                <Link to='wishlist'><button role="tab" onClick={() => setActive(1)} className={`tab ${active === 1 ? 'tab-active' : ''}`}>Wishlist Books</button></Link>
                 <button role="tab" className="tab"></button>
             </div>
             <CategoryListCard></CategoryListCard>
