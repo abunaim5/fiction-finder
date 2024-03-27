@@ -1,6 +1,41 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
-import { handleSetBooksIdInLocal } from '../../utils/localBooks/localBooks';
+import { handleGetBooksIdInLocal, handleSetBooksIdInLocal } from '../../utils/localBooks/localBooks';
+import { toast } from 'react-toastify';
+// import { useEffect, useState } from 'react';
 // import image from '/images/bannerImg.png'
+
+
+// const [readBookIds, setReadBookIds] = useState([])
+// const [wishlistBookIds, setWishlistBookIds] = useState([])
+
+// useEffect(() => {
+//     const readBookIdList = handleGetBooksIdInLocal('read');
+//     setReadBookIds(readBookIdList);
+//     const wishlistIdList = handleGetBooksIdInLocal('wishlist');
+//     setWishlistBookIds(wishlistIdList);
+// }, [])
+
+// // console.log(wishlistIdList)
+// const handleCheckExist = (bookId) => {
+//     const idExist = readBookIdList.find(readId => readId === bookId)
+//     if (!idExist) {
+//         handleSetBooksIdInLocal('wishlist', bookId);
+//     }
+//     else {
+//         toast.error('Already read this book');
+//     }
+//     return;
+// };
+
+// const handleRemoveWishlist = (bookId) => {
+//     const isExist = wishlistIdList.find(wishId => wishId === bookId);
+//     if (isExist) {
+//         handleRemoveBooksIdInLocal('wishlist', bookId);
+//         handleSetBooksIdInLocal('read', bookId);
+//         return
+//     }
+//     handleSetBooksIdInLocal('read', bookId);
+// }
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -8,6 +43,40 @@ const BookDetails = () => {
     const intId = parseInt(id);
     const book = books.find(book => book.bookId === intId);
     const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+
+
+    // const [readBookIds, setReadBookIds] = useState([])
+    // const [wishlistBookIds, setWishlistBookIds] = useState([])
+
+    // useEffect(() => {
+    //     const readBookIdList = handleGetBooksIdInLocal('read');
+    //     setReadBookIds(readBookIdList);
+    //     const wishlistIdList = handleGetBooksIdInLocal('wishlist');
+    //     setWishlistBookIds(wishlistIdList);
+    // }, [])
+
+    // console.log(wishlistIdList)
+    const handleCheckExist = (bookId) => {
+        const readBookIdList = handleGetBooksIdInLocal('read');
+        const idExist = readBookIdList.find(readId => readId === bookId)
+        if (!idExist) {
+            handleSetBooksIdInLocal('wishlist', bookId);
+        }
+        else {
+            toast.error('Already read this book');
+        }
+        return;
+    };
+
+    // const handleRemoveWishlist = (bookId) => {
+    //     const isExist = wishlistIdList.find(wishId => wishId === bookId);
+    //     if (isExist) {
+    //         handleRemoveBooksIdInLocal('wishlist', bookId);
+    //         handleSetBooksIdInLocal('read', bookId);
+    //         return
+    //     }
+    //     handleSetBooksIdInLocal('read', bookId);
+    // }
 
     return (
         <div className='grid grid-cols-6 gap-12 mt-12 mb-40'>
@@ -43,8 +112,8 @@ const BookDetails = () => {
                     <h4 className='flex gap-16 font-work text-[#131313B3]'><span>Rating:</span><span className='font-semibold text-[#131313]'>{rating}</span></h4>
                 </div>
                 <div className='mt-8 space-x-4'>
-                    <Link onClick={()=>handleSetBooksIdInLocal('read',bookId)}><button className="btn text-[#131313] bg-transparent border-2 border-[#50B1C9] hover:bg-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Read</button></Link>
-                    <Link onClick={()=>handleSetBooksIdInLocal('wishlist',bookId)}><button className="btn text-white hover:text-[#131313] bg-[#50B1C9] hover:bg-transparent border-2 border-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Wishlist</button></Link>
+                    <Link onClick={() => handleSetBooksIdInLocal('read', bookId)}><button className="btn text-[#131313] bg-transparent border-2 border-[#50B1C9] hover:bg-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Read</button></Link>
+                    <Link onClick={() => handleCheckExist(bookId)}><button className="btn text-white hover:text-[#131313] bg-[#50B1C9] hover:bg-transparent border-2 border-transparent hover:border-[#50B1C9] rounded-lg text-lg font-work font-semibold w-auto h-auto px-7 py-[18px]">Wishlist</button></Link>
                 </div>
             </div>
         </div>

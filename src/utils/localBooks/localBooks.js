@@ -16,14 +16,20 @@ const handleSetBooksIdInLocal = (listName, id) => {
         const newBookIdList = [...bookIdList, id];
         const newBookListStr = JSON.stringify(newBookIdList);
         localStorage.setItem(listName, newBookListStr);
-        if(listName === 'read'){
+        if (listName === 'read') {
             toast.success('Book added to read');
+            return;
         }
-        else if(listName === 'wishlist'){
+        else if (listName === 'wishlist') {
             toast.success('Book added to wishlist');
+            return;
         }
+        return;
     }
-    return;
+    else {
+        toast.warn('Already added this book');
+        return;
+    }
 }
 
 const handleRemoveBooksIdInLocal = (listName, id) => {

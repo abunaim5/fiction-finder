@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const CategoryListCard = ({ book }) => {
     const { bookId, image, bookName, author, tags, publisher, totalPages, category, rating } = book;
 
-    console.log(book);
+    // console.log(book);
 
     return (
         <div className='grid grid-cols-6 gap-6 border border-[#13131326] p-6 rounded-2xl'>

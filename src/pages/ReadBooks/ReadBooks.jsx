@@ -2,10 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import CategoryListCard from "../../components/CategoryListCard/CategoryListCard";
 import { handleGetBooksIdInLocal } from "../../utils/localBooks/localBooks";
 
-const readBookIdList = handleGetBooksIdInLocal('read');
-
 const ReadBooks = () => {
     const books = useLoaderData();
+    const readBookIdList = handleGetBooksIdInLocal('read');
 
     return (
         <div className="mt-8 mb-40 space-y-6">
