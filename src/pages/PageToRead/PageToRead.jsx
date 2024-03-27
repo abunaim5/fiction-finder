@@ -1,8 +1,7 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import { useLoaderData } from 'react-router-dom';
 import { handleGetBooksIdInLocal } from '../../utils/localBooks/localBooks';
-import { useState } from 'react';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -15,7 +14,7 @@ const getPath = (x, y, width, height) => {
 
 const TriangleBar = (props) => {
     const { fill, x, y, width, height } = props;
-
+    // console.log(fill, x, y, width, height)
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
@@ -42,14 +41,11 @@ const PageToRead = () => {
 
     })
 
-    console.log(bookData, readBookIds);
-
     return (
         <div className='flex items-center justify-center py-28 pl-[84px] pr-32 bg-[#F3F3F3] rounded-2xl mt-9 mb-24 font-work text-[#13131380]'>
-            <div>
+            <ResponsiveContainer width="100%" height={479}>
                 <BarChart
-                    width={1225}
-                    height={479}
+                    
                     data={bookData}
                     margin={{
                         top: 20,
@@ -67,14 +63,13 @@ const PageToRead = () => {
                         ))}
                     </Bar>
                 </BarChart>
-            </div>
+            </ResponsiveContainer>
         </div>
     );
 };
 
-PageToRead.propTypes = {
-    // fill, x, y, width, height
-    // props: PropTypes.object.isRequired
+TriangleBar.propTypes = {
+    // fill: PropTypes.object.isRequired
 }
 
 export default PageToRead;
