@@ -1,0 +1,80 @@
+[
+    {
+      "bookId": 7,
+      "bookName": "The Alchemist",
+      "author": "Paulo Coelho",
+      "image": "https://i.postimg.cc/P5T99HCK/alchemist.jpg",
+      "review": "A timeless tale of self-discovery and the pursuit of one's dreams, filled with wisdom and inspiration.",
+      "totalPages": 208,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Adventure", "Philosophical"],
+      "publisher": "HarperCollins",
+      "yearOfPublishing": 1988
+    },
+    {
+      "bookId": 8,
+      "bookName": "The Dating Playbook for Men",
+      "author": "Andrew Ferebee",
+      "image": "https://i.postimg.cc/D0Pb3vpt/banner-Img.png",
+      "review": "A comprehensive guide for men navigating the complexities of dating, offering practical advice and strategies for success.",
+      "totalPages": 352,
+      "rating": 4.2,
+      "category": "Non-Fiction",
+      "tags": ["Dating", "Relationships"],
+      "publisher": "Knowledge for Men",
+      "yearOfPublishing": 2015
+    },
+    {
+      "bookId": 9,
+      "bookName": "Why Do You Hate Money",
+      "author": "Bailey R. Owens",
+      "image": "https://i.postimg.cc/HL6YmGBr/kindpng-7318921.png",
+      "review": "An insightful exploration of personal finance and mindset, challenging readers to examine their beliefs about wealth and abundance.",
+      "totalPages": 240,
+      "rating": 4.6,
+      "category": "Personal Finance",
+      "tags": ["Money Management", "Mindset"],
+      "publisher": "Independently published",
+      "yearOfPublishing": 2021
+    },
+    {
+      "bookId": 10,
+      "bookName": "The Hate U Give",
+      "author": "Angie Thomas",
+      "image": "https://i.postimg.cc/rsmtTC1k/kindpng-1064993.png",
+      "review": "A powerful and thought-provoking novel that tackles issues of race, identity, and activism through the eyes of a young black girl.",
+      "totalPages": 464,
+      "rating": 4.8,
+      "category": "Young Adult",
+      "tags": ["Social Issues", "Activism"],
+      "publisher": "Balzer + Bray",
+      "yearOfPublishing": 2017
+    },
+    {
+      "bookId": 11,
+      "bookName": "Spine of the Dragon",
+      "author": "Kevin J. Anderson",
+      "image": "https://i.postimg.cc/Gt5Tm8Ks/kindpng-4945926-1.png",
+      "review": "A captivating fantasy epic that intertwines multiple storylines and cultures, leading to an epic clash between good and evil.",
+      "totalPages": 560,
+      "rating": 4.3,
+      "category": "Fantasy",
+      "tags": ["Epic Fantasy", "Worldbuilding"],
+      "publisher": "Tor Books",
+      "yearOfPublishing": 2019
+    },
+    {
+      "bookId": 12,
+      "bookName": "Cold Case",
+      "author": "David Reichert",
+      "image": "https://i.postimg.cc/26TBgXBG/kindpng-2592315-1.png",
+      "review": "A gripping true-crime account of the pursuit and capture of one of America's most notorious serial killers, Gary Ridgway, known as the Green River Killer.",
+      "totalPages": 352,
+      "rating": 4.4,
+      "category": "True Crime",
+      "tags": ["Serial Killer", "Investigation"],
+      "publisher": "G.P. Putnam's Sons",
+      "yearOfPublishing": 2004
+    }
+  ]

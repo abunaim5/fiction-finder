@@ -8,8 +8,9 @@ const Banner = () => {
                 <h1 className="text-2xl md:text-4xl xl:text-6xl font-semibold md:font-bold mb-12">Unlock Worlds: Discover Your Next Fictional Journey</h1>
                 <Link to='/category'><button className="btn text-white hover:text-[#131313] bg-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-[#23BE0A] rounded-lg text-xl font-work font-bold w-auto h-auto px-3 md:px-5 lg:px-7 py-2 md:py-3 lg:py-5">View The List</button></Link>
             </div>
-            <div className="col-span-6 md:col-span-2 flex justify-center">
-                <img className="w-48 md:w-full" src={bannerImg} alt="" />
+            <div className="col-span-6 md:col-span-2 flex justify-center relative">
+                <img className="" src={bannerImg} alt="" />
+                <Link to='/premium'><button className="btn w-auto h-auto min-h-max bg-[#23BE0A99] border-none hover:bg-[#23BE0A66] rounded-full px-2 xl:px-5 py-1 text-white text-xs xl:text-base font-normal xl:font-medium absolute right-[105px] md:right-10 lg:right-12 xl:right-20 top-8 md:top-5 xl:top-8">Premium</button></Link>
             </div>
         </div>
     );

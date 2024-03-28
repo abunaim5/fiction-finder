@@ -13,6 +13,7 @@ import PageToRead from './pages/PageToRead/PageToRead.jsx';
 import Error from './components/Error/Error.jsx';
 import ReadBooks from './pages/ReadBooks/ReadBooks.jsx';
 import Wishlist from './pages/Wishlist/Wishlist.jsx';
+import PremiumBooks from './pages/PremiumBooks/PremiumBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path: '/page-read',
         element: <PageToRead></PageToRead>,
         loader: () => fetch('/books.json'),
+      },
+      {
+        path: '/premium',
+        element: <PremiumBooks></PremiumBooks>,
+        loader: () => fetch('/premiumBooks.json'),
       }
     ]
   }
