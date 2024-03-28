@@ -1,10 +1,13 @@
 import { FaRegStar } from "react-icons/fa";
 import PropTypes from 'prop-types'
 import { handleSetBooksIdInLocal } from "../../utils/localBooks/localBooks";
+import { useContext } from "react";
+
+
 
 const PremiumBookCard = ({ premiumBook }) => {
     const { bookId, image, bookName, author, tags, rating, category } = premiumBook;
-
+    
     return (
         <div className='p-6 rounded-2xl border border-[#13131326]'>
             <div className='flex items-center justify-center px-24 py-8 bg-[#F3F3F3] rounded-2xl relative'>

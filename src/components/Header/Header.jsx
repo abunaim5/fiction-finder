@@ -1,13 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
+import { handleGetBooksIdInLocal } from "../../utils/localBooks/localBooks";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+    const [cart, setCart] = useState([]);
+
+    // const handleCart = () => {
+
+    // }
+
+    useEffect(() => {
+        const cartData = handleGetBooksIdInLocal('cart');
+        setCart(cartData);
+    }, [])
 
     const links = <>
         <NavLink to='/' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Home</li></NavLink>
         <NavLink to='/category/read' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Listed Books</li></NavLink>
         <NavLink to='/page-read' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Pages to Read</li></NavLink>
         <NavLink to='premium' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Premium</li></NavLink>
-        <NavLink to='/cart' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost'><li>Cart</li></NavLink>
+        <NavLink to='/cart' style={({ isActive }) => { return { color: isActive && '#23BE0A', border: isActive && '1px solid #23BE0A' } }} className='btn btn-ghost relative'><li>Cart</li> <span className="bg-[#23BE0A] rounded-full text-white p-1 text-center absolute -right-2 -top-2">{cart.length}</span></NavLink>
     </>
 
     return (

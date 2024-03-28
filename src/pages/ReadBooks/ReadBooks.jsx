@@ -8,14 +8,13 @@ import { CategoryContext } from "../../Layout/Root";
 // const handleSort = (categoryName) =>{
 //     cateName = categoryName;
 // }
-
+const readBookIdList = handleGetBooksIdInLocal('read');
 const ReadBooks = () => {
     const books = useLoaderData();
-    const readBookIdList = handleGetBooksIdInLocal('read');
+    
 
     const [allCategory, setAllCategory] = useState([]);
     const [displayCategory, setDisplayCategory] = useState([]);
-    console.log(allCategory)
 
     const handleFilterCategory = filterText => {
         console.log(filterText);
@@ -25,19 +24,22 @@ const ReadBooks = () => {
             console.log('clicked', allCategory);
         }
         else if (filterText === 'pages') {
-            const categoryByPage = allCategory.filter(book => book.totalPages >= 0);
+            const categoryByPage = allCategory.sort((a, b) => b.totalPages - a.totalPages);
             setDisplayCategory(categoryByPage);
         }
         else if (filterText === 'rating') {
-            const categoryByRating = allCategory.filter(book => book.rating >= 0);
+            const categoryByRating = allCategory.sort((a, b) => b.rating - a.rating);
             setDisplayCategory(categoryByRating);
+            return;
         }
         else if (filterText === 'year') {
-            const categoryByYear = allCategory.filter(book => book.yearOfPublishing >= 0);
+            const categoryByYear = allCategory.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+            console.log(categoryByYear);
             setDisplayCategory(categoryByYear);
         }
+        return;
     }
-
+    const {setData} = useContext(CategoryContext)
     useEffect(() => {
         
         if (books.length > 0) {
@@ -58,12 +60,14 @@ const ReadBooks = () => {
             setAllCategory(allCategoryBooks);
             setDisplayCategory(allCategoryBooks);
         }
+        
+        setData({handleFilterCategory})
     }, [books]);
 
 
-    const {setData} = useContext(CategoryContext)
+    // const {setData} = useContext(CategoryContext)
     useEffect(()=>{        
-        setData({handleFilterCategory})
+        // setData({handleFilterCategory})
     },[])
     // console.log(readBookIdList);
 

@@ -9,8 +9,6 @@ export const CategoryContext = createContext();
 
 const Root = () => {
     const [data, setData] = useState({});
-    // console.log(data);
-
     return (
         <div className="max-w-[1440px] px-2 lg:px-4 mx-auto pt-6 md:pt-12">
             <CategoryContext.Provider value={{data, setData}}>

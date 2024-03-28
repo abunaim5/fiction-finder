@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 const CartCard = ({premiumBook}) => {
-    const { bookId, image, bookName, author, tags, publisher, totalPages, category, rating } = premiumBook;
+    const { image, bookName, author, tags, publisher, totalPages, category, rating } = premiumBook;
 
 
     return (
