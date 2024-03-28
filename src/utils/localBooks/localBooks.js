@@ -24,6 +24,10 @@ const handleSetBooksIdInLocal = (listName, id) => {
             toast.success('Book added to wishlist');
             return;
         }
+        else if (listName === 'cart'){
+            toast.success('Successfully add to cart');
+            return;
+        }
         return;
     }
     else {
