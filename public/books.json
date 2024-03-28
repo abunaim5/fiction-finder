@@ -66,14 +66,14 @@
     },
     {
       "bookId": 6,
-      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "bookName": "Harry Potter",
       "author": "J.K. Rowling",
       "image": "https://i.postimg.cc/Znf4nqvb/harry.png",
       "review": "The book that started the global phenomenon introduces Harry Potter, a young wizard, and his adventures in Hogwarts. A mix of magic, friendship, and courage.",
       "totalPages": 309,
       "rating": 4.9,
       "category": "Fantasy Fiction",
-      "tags": ["Magic", "Adventure", "Coming_of_Age"],
+      "tags": ["Magic", "Adventure"],
       "publisher": "Bloomsbury",
       "yearOfPublishing": 1997
     }

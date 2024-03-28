@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import { Link, Outlet } from "react-router-dom";
+import { CategoryContext } from "../../Layout/Root";
 
 const BooksCategory = () => {
     const [active, setActive] = useState(0);
+
+    const {data} = useContext(CategoryContext);
+    const {handleFilterCategory} = data;
+    // console.log(handleFilterCategory);
 
     return (
         <div className="mt-8">
@@ -12,11 +17,12 @@ const BooksCategory = () => {
             </div>
             <div className="text-center mt-8">
                 <details className="dropdown">
-                    <summary className="m-1 btn text-white bg-[#23BE0A] hover:bg-[#23BE0A] border-transparent rounded-lg text-lg font-work font-semibold w-auto h-auto px-5 py-[14px]">Sort By <span className="text-xl"><SlArrowDown /></span></summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 font-work">
-                        <li><a>Rating</a></li>
-                        <li><a>Number of pages</a></li>
-                        <li><a>Published year</a></li>
+                    <summary className="m-1 btn text-white bg-[#23BE0A] hover:bg-[#23BE0A] border-transparent rounded-lg text-lg font-work font-semibold w-auto h-auto px-3 md:px-5 py-2 md:py-[14px]">Sort By <span className="text-xl"><SlArrowDown /></span></summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 font-work space-y-2">
+                        <button onClick={()=>handleFilterCategory('all')} className="bg-[#F3F3F3] rounded-full py-1 px-3 text-base"><li>Default</li></button>
+                        <button onClick={()=>handleFilterCategory('rating')} className="bg-[#F3F3F3] rounded-full py-1 px-3 text-base"><li>Rating</li></button>
+                        <button onClick={()=>handleFilterCategory('pages')} className="bg-[#F3F3F3] rounded-full py-1 px-3 text-base"><li>Number of pages</li></button>
+                        <button onClick={()=>handleFilterCategory('year')} className="bg-[#F3F3F3] rounded-full py-1 px-3 text-base"><li>Published year</li></button>                       
                     </ul>
                 </details>
             </div>

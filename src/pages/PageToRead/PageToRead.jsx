@@ -42,7 +42,7 @@ const PageToRead = () => {
     })
 
     return (
-        <div className='flex items-center justify-center py-28 pl-[84px] pr-32 bg-[#F3F3F3] rounded-2xl mt-9 mb-24 font-work text-[#13131380]'>
+        <div className='flex items-center justify-center py-12 lg:py-14 xl:py-28 pl-0 lg:pl-5 xl:pl-[84px] pr-[44px] lg:pr-16 xl:pr-32 bg-[#F3F3F3] rounded-2xl mt-9 mb-24 font-work text-[#13131380]'>
             <ResponsiveContainer width="100%" height={479}>
                 <BarChart
                     
